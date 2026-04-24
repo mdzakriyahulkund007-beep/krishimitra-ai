@@ -22,7 +22,8 @@ A full-stack React + Vite multilingual AI farming advisory and marketplace web a
 
 ## Architecture
 - `src/i18n/translations.ts` — `LANGUAGES` constant + `T` dictionary + `t(key, lang)` helper.
-- `src/i18n/recommendations.ts` — localized AI recommendation strings keyed by condition.
+- `src/i18n/options.ts` — `CROP_OPTIONS`, `SOIL_OPTIONS`, `IRRIGATION_OPTIONS`, `GROWTH_STAGE_OPTIONS`, `QUALITY_GRADE_OPTIONS` with localized labels for all 5 languages and crop image paths.
+- `src/i18n/recommendations.ts` — localized AI recommendation strings keyed by condition; also exports `CROP_TIPS`, `CROP_YIELD`, `CROP_WATER_NEED` lookup tables for data-driven advisory.
 - `src/store/AppContext.tsx` — global state with `lang`, `profile`, `listings`, `tasks`, `activities`, `metrics` (FieldMetrics) — all persisted to localStorage.
 - `src/utils/voice.ts` — speech synthesis wrapper with language-voice mapping.
 - `src/utils/report.ts` — `downloadReport()` builds a multi-page PDF using jsPDF.

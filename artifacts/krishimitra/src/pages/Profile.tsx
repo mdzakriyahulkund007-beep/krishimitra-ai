@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { useApp } from "@/store/AppContext";
 import { t, LANGUAGES, type LangCode } from "@/i18n/translations";
+import { CROP_OPTIONS, SOIL_OPTIONS, IRRIGATION_OPTIONS } from "@/i18n/options";
 import { useToast } from "@/hooks/use-toast";
 
 export default function Profile() {
@@ -77,29 +78,67 @@ export default function Profile() {
             </div>
             <div className="space-y-1.5">
               <Label>{t("cropType", lang)}</Label>
-              <Input
+              <Select
                 value={form.cropType}
-                onChange={(e) => setForm({ ...form, cropType: e.target.value })}
-                data-testid="input-crop-type"
-              />
+                onValueChange={(v) => setForm({ ...form, cropType: v })}
+              >
+                <SelectTrigger data-testid="select-profile-crop">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {CROP_OPTIONS.map((o) => (
+                    <SelectItem key={o.value} value={o.value}>
+                      {o.labels[lang]}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className="space-y-1.5">
               <Label>{t("soilType", lang)}</Label>
-              <Input
+              <Select
                 value={form.soilType}
-                onChange={(e) => setForm({ ...form, soilType: e.target.value })}
-                data-testid="input-soil-type"
-              />
+                onValueChange={(v) => setForm({ ...form, soilType: v })}
+              >
+                <SelectTrigger data-testid="select-profile-soil">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {SOIL_OPTIONS.map((o) => (
+                    <SelectItem key={o.value} value={o.value}>
+                      {o.labels[lang]}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className="space-y-1.5">
               <Label>{t("irrigationType", lang)}</Label>
-              <Input
+              <Select
                 value={form.irrigationType}
-                onChange={(e) => setForm({ ...form, irrigationType: e.target.value })}
-                data-testid="input-irrigation-type"
-              />
+                onValueChange={(v) => setForm({ ...form, irrigationType: v })}
+              >
+                <SelectTrigger data-testid="select-profile-irrigation">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {IRRIGATION_OPTIONS.map((o) => (
+                    <SelectItem key={o.value} value={o.value}>
+                      {o.labels[lang]}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className="space-y-1.5">
+              <Label>{t("call", lang)}</Label>
+              <Input
+                value={form.phone ?? ""}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                data-testid="input-phone"
+              />
+            </div>
+            <div className="space-y-1.5 sm:col-span-2">
               <Label>{t("preferredLanguage", lang)}</Label>
               <Select value={selectedLang} onValueChange={(v) => setSelectedLang(v as LangCode)}>
                 <SelectTrigger data-testid="select-pref-lang">

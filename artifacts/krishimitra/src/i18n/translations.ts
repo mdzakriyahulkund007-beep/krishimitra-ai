@@ -48,10 +48,14 @@ export const T: Record<string, Dict> = {
   delete: { en: "Delete", hi: "हटाएँ", kn: "ಅಳಿಸಿ", te: "తొలగించు", ur: "حذف" },
   done: { en: "Done", hi: "पूर्ण", kn: "ಪೂರ್ಣಗೊಂಡಿದೆ", te: "పూర్తయింది", ur: "مکمل" },
   pending: { en: "Pending", hi: "लंबित", kn: "ಬಾಕಿ", te: "పెండింగ్", ur: "زیر التواء" },
-  contact: { en: "Contact", hi: "संपर्क", kn: "ಸಂಪರ್ಕ", te: "సంప్రదించండి", ur: "رابطہ" },
+  contact: { en: "Contact Seller", hi: "विक्रेता से संपर्क", kn: "ಮಾರಾಟಗಾರನನ್ನು ಸಂಪರ್ಕಿಸಿ", te: "విక్రేతను సంప్రదించండి", ur: "بیچنے والے سے رابطہ" },
+  call: { en: "Call", hi: "कॉल करें", kn: "ಕರೆ ಮಾಡಿ", te: "కాల్", ur: "کال" },
   search: { en: "Search", hi: "खोजें", kn: "ಹುಡುಕಿ", te: "వెతకండి", ur: "تلاش" },
   filter: { en: "Filter", hi: "फ़िल्टर", kn: "ಫಿಲ್ಟರ್", te: "ఫిల్టర్", ur: "فلٹر" },
+  sortBy: { en: "Sort by", hi: "क्रमबद्ध करें", kn: "ವಿಂಗಡಿಸಿ", te: "క్రమబద్ధీకరించు", ur: "ترتیب دیں" },
   loading: { en: "Loading...", hi: "लोड हो रहा है...", kn: "ಲೋಡ್ ಆಗುತ್ತಿದೆ...", te: "లోడ్ అవుతోంది...", ur: "لوڈ ہو رہا ہے..." },
+  noResults: { en: "No results found", hi: "कोई परिणाम नहीं", kn: "ಯಾವುದೇ ಫಲಿತಾಂಶಗಳಿಲ್ಲ", te: "ఫలితాలు లేవు", ur: "کوئی نتائج نہیں" },
+  selectOption: { en: "Select…", hi: "चुनें…", kn: "ಆಯ್ಕೆಮಾಡಿ…", te: "ఎంచుకోండి…", ur: "منتخب کریں…" },
 
   // Profile fields
   name: { en: "Name", hi: "नाम", kn: "ಹೆಸರು", te: "పేరు", ur: "نام" },
@@ -62,6 +66,7 @@ export const T: Record<string, Dict> = {
   soilType: { en: "Soil Type", hi: "मिट्टी का प्रकार", kn: "ಮಣ್ಣಿನ ಪ್ರಕಾರ", te: "నేల రకం", ur: "مٹی کی قسم" },
   irrigationType: { en: "Irrigation Type", hi: "सिंचाई का प्रकार", kn: "ನೀರಾವರಿ ಪ್ರಕಾರ", te: "నీటిపారుదల రకం", ur: "آبپاشی کی قسم" },
   preferredLanguage: { en: "Preferred Language", hi: "पसंदीदा भाषा", kn: "ಆದ್ಯತೆಯ ಭಾಷೆ", te: "ప్రాధాన్య భాష", ur: "پسندیدہ زبان" },
+  acres: { en: "acres", hi: "एकड़", kn: "ಎಕರೆ", te: "ఎకరాలు", ur: "ایکڑ" },
 
   // Dashboard
   farmHealth: { en: "Farm Health", hi: "खेत स्वास्थ्य", kn: "ಕೃಷಿ ಆರೋಗ್ಯ", te: "వ్యవసాయ ఆరోగ్యం", ur: "کھیت کی صحت" },
@@ -83,7 +88,10 @@ export const T: Record<string, Dict> = {
   // Advisory
   analyzeFarm: { en: "Analyze Farm", hi: "फसल जांचें", kn: "ಬೆಳೆ ಪರಿಶೀಲಿಸಿ", te: "పంట విశ్లేషించు", ur: "فصل تجزیہ کریں" },
   crop: { en: "Crop", hi: "फसल", kn: "ಬೆಳೆ", te: "పంట", ur: "فصل" },
+  fieldArea: { en: "Field Area (Acres)", hi: "खेत क्षेत्र (एकड़)", kn: "ಕ್ಷೇತ್ರ ಪ್ರದೇಶ (ಎಕರೆ)", te: "పొలం వైశాల్యం (ఎకరాలు)", ur: "کھیت کا رقبہ (ایکڑ)" },
+  growthStage: { en: "Growth Stage", hi: "वृद्धि चरण", kn: "ಬೆಳವಣಿಗೆಯ ಹಂತ", te: "పెరుగుదల దశ", ur: "نشوونما کا مرحلہ" },
   soilMoisture: { en: "Soil Moisture (%)", hi: "मिट्टी की नमी (%)", kn: "ಮಣ್ಣಿನ ತೇವಾಂಶ (%)", te: "నేల తేమ (%)", ur: "مٹی کی نمی (%)" },
+  soilPH: { en: "Soil pH", hi: "मिट्टी पीएच", kn: "ಮಣ್ಣಿನ pH", te: "నేల pH", ur: "مٹی pH" },
   temperature: { en: "Temperature (°C)", hi: "तापमान (°C)", kn: "ತಾಪಮಾನ (°C)", te: "ఉష్ణోగ్రత (°C)", ur: "درجہ حرارت (°C)" },
   humidity: { en: "Humidity (%)", hi: "नमी (%)", kn: "ಆರ್ದ್ರತೆ (%)", te: "తేమ (%)", ur: "نمی (%)" },
   pestRisk: { en: "Pest Risk", hi: "कीट जोखिम", kn: "ಕೀಟ ಅಪಾಯ", te: "తెగుళ్ల ప్రమాదం", ur: "کیڑوں کا خطرہ" },
@@ -91,6 +99,15 @@ export const T: Record<string, Dict> = {
   nutrientDeficiency: { en: "Nutrient Deficiency", hi: "पोषक तत्व की कमी", kn: "ಪೋಷಕಾಂಶ ಕೊರತೆ", te: "పోషక లోపం", ur: "غذائیت کی کمی" },
   recommendations: { en: "Recommendations", hi: "सिफ़ारिशें", kn: "ಶಿಫಾರಸುಗಳು", te: "సిఫార్సులు", ur: "سفارشات" },
   health: { en: "Health", hi: "स्वास्थ्य", kn: "ಆರೋಗ್ಯ", te: "ఆరోగ్యం", ur: "صحت" },
+  yieldEstimate: { en: "Yield Estimate", hi: "उपज अनुमान", kn: "ಇಳುವರಿ ಅಂದಾಜು", te: "దిగుబడి అంచనా", ur: "پیداوار کا تخمینہ" },
+  waterNeed: { en: "Water Need", hi: "जल आवश्यकता", kn: "ನೀರಿನ ಅಗತ್ಯ", te: "నీటి అవసరం", ur: "پانی کی ضرورت" },
+  fertilizerPlan: { en: "Fertilizer Plan", hi: "उर्वरक योजना", kn: "ಗೊಬ್ಬರ ಯೋಜನೆ", te: "ఎరువు ప్రణాళిక", ur: "کھاد کا منصوبہ" },
+  litersPerDay: { en: "L/day", hi: "लीटर/दिन", kn: "ಲೀ/ದಿನ", te: "లీ/రోజు", ur: "لیٹر/دن" },
+  quintalsPerAcre: { en: "quintals/acre", hi: "क्विंटल/एकड़", kn: "ಕ್ವಿಂಟಾಲ್/ಎಕರೆ", te: "క్వింటాళ్లు/ఎకరం", ur: "کوئنٹل/ایکڑ" },
+  totalEstimate: { en: "Total Estimate", hi: "कुल अनुमान", kn: "ಒಟ್ಟು ಅಂದಾಜು", te: "మొత్తం అంచనా", ur: "کل تخمینہ" },
+  farmInputs: { en: "Farm Inputs", hi: "फार्म इनपुट", kn: "ಕೃಷಿ ಇನ್‌ಪುಟ್‌ಗಳು", te: "వ్యవసాయ ఇన్‌పుట్‌లు", ur: "کھیت کے ان پٹس" },
+  envInputs: { en: "Environmental Inputs", hi: "पर्यावरणीय इनपुट", kn: "ಪರಿಸರ ಇನ್‌ಪುಟ್‌ಗಳು", te: "పర్యావరణ ఇన్‌పుట్‌లు", ur: "ماحولیاتی ان پٹس" },
+  analysisResult: { en: "Analysis Result", hi: "विश्लेषण परिणाम", kn: "ವಿಶ್ಲೇಷಣೆ ಫಲಿತಾಂಶ", te: "విశ్లేషణ ఫలితం", ur: "تجزیہ کا نتیجہ" },
 
   // Weather
   forecast5Day: { en: "5-Day Forecast", hi: "5 दिन का पूर्वानुमान", kn: "5 ದಿನಗಳ ಮುನ್ಸೂಚನೆ", te: "5 రోజుల సూచన", ur: "5 دن کی پیش گوئی" },
@@ -99,15 +116,25 @@ export const T: Record<string, Dict> = {
 
   // Marketplace
   createListing: { en: "Create Listing", hi: "लिस्टिंग बनाएँ", kn: "ಪಟ್ಟಿ ರಚಿಸಿ", te: "జాబితా సృష్టించు", ur: "فہرست بنائیں" },
-  browseListings: { en: "Browse Listings", hi: "सूचियाँ ब्राउज़ करें", kn: "ಪಟ್ಟಿಗಳನ್ನು ಬ್ರೌಸ್", te: "జాబితాలను బ్రౌజ్", ur: "فہرستیں براؤز کریں" },
+  browseListings: { en: "Browse Crops for Sale", hi: "बिक्री के लिए फसलें ब्राउज़ करें", kn: "ಮಾರಾಟಕ್ಕೆ ಬೆಳೆಗಳು ಬ್ರೌಸ್", te: "అమ్మకానికి పంటలను బ్రౌజ్", ur: "فروخت کے لیے فصلیں براؤز کریں" },
   quantityKg: { en: "Quantity (kg)", hi: "मात्रा (किग्रा)", kn: "ಪ್ರಮಾಣ (ಕೆಜಿ)", te: "పరిమాణం (కిలోలు)", ur: "مقدار (کلو)" },
   pricePerKg: { en: "Price per kg (₹)", hi: "मूल्य प्रति किग्रा (₹)", kn: "ಕೆಜಿ ಬೆಲೆ (₹)", te: "కిలో ధర (₹)", ur: "فی کلو قیمت (₹)" },
   location: { en: "Location", hi: "स्थान", kn: "ಸ್ಥಳ", te: "ప్రదేశం", ur: "مقام" },
   qualityGrade: { en: "Quality Grade", hi: "गुणवत्ता ग्रेड", kn: "ಗುಣಮಟ್ಟದ ಶ್ರೇಣಿ", te: "నాణ్యత గ్రేడ్", ur: "کوالٹی گریڈ" },
   harvestDate: { en: "Harvest Date", hi: "कटाई तिथि", kn: "ಸುಗ್ಗಿ ದಿನಾಂಕ", te: "పంట కోత తేదీ", ur: "کٹائی کی تاریخ" },
   myListings: { en: "My Listings", hi: "मेरी लिस्टिंग", kn: "ನನ್ನ ಪಟ್ಟಿಗಳು", te: "నా జాబితాలు", ur: "میری فہرستیں" },
-  buyer: { en: "Buyer View", hi: "खरीदार दृश्य", kn: "ಖರೀದಿದಾರ ನೋಟ", te: "కొనుగోలుదారు వీక్షణ", ur: "خریدار منظر" },
-  seller: { en: "Seller View", hi: "विक्रेता दृश्य", kn: "ಮಾರಾಟಗಾರ ನೋಟ", te: "విక్రేత వీక్షణ", ur: "بیچنے والا منظر" },
+  buyer: { en: "Buy Crops", hi: "फसलें खरीदें", kn: "ಬೆಳೆಗಳನ್ನು ಖರೀದಿಸಿ", te: "పంటలు కొనుగోలు", ur: "فصلیں خریدیں" },
+  seller: { en: "Sell Crops", hi: "फसलें बेचें", kn: "ಬೆಳೆಗಳನ್ನು ಮಾರಾಟ ಮಾಡಿ", te: "పంటలు అమ్మండి", ur: "فصلیں فروخت کریں" },
+  seller_name: { en: "Seller", hi: "विक्रेता", kn: "ಮಾರಾಟಗಾರ", te: "విక్రేత", ur: "بیچنے والا" },
+  rating: { en: "Rating", hi: "रेटिंग", kn: "ರೇಟಿಂಗ್", te: "రేటింగ్", ur: "درجہ بندی" },
+  totalPrice: { en: "Total", hi: "कुल मूल्य", kn: "ಒಟ್ಟು", te: "మొత్తం", ur: "کل" },
+  available: { en: "Available", hi: "उपलब्ध", kn: "ಲಭ್ಯ", te: "అందుబాటులో", ur: "دستیاب" },
+  freshlyHarvested: { en: "Freshly Harvested", hi: "ताज़ा कटा हुआ", kn: "ತಾಜಾ ಕೊಯ್ಲು", te: "తాజా పంట", ur: "تازہ کٹائی" },
+  verifiedFarmer: { en: "Verified Farmer", hi: "सत्यापित किसान", kn: "ಪರಿಶೀಲಿತ ರೈತ", te: "ధ్రువీకరించిన రైతు", ur: "تصدیق شدہ کسان" },
+  sortPriceLow: { en: "Price: Low to High", hi: "मूल्य: कम से ज़्यादा", kn: "ಬೆಲೆ: ಕಡಿಮೆಯಿಂದ ಹೆಚ್ಚು", te: "ధర: తక్కువ నుండి ఎక్కువ", ur: "قیمت: کم سے زیادہ" },
+  sortPriceHigh: { en: "Price: High to Low", hi: "मूल्य: ज़्यादा से कम", kn: "ಬೆಲೆ: ಹೆಚ್ಚಿನಿಂದ ಕಡಿಮೆ", te: "ధర: ఎక్కువ నుండి తక్కువ", ur: "قیمت: زیادہ سے کم" },
+  sortRecent: { en: "Most Recent", hi: "सबसे हाल का", kn: "ಇತ್ತೀಚಿನ", te: "ఇటీవలి", ur: "حالیہ" },
+  allCrops: { en: "All Crops", hi: "सभी फसलें", kn: "ಎಲ್ಲಾ ಬೆಳೆಗಳು", te: "అన్ని పంటలు", ur: "تمام فصلیں" },
 
   // Monitoring bar
   monitoring: { en: "Field Monitoring", hi: "क्षेत्र निगरानी", kn: "ಕ್ಷೇತ್ರ ಮೇಲ್ವಿಚಾರಣೆ", te: "క్షేత్ర పర్యవేక్షణ", ur: "فیلڈ نگرانی" },

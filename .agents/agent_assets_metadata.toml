@@ -1,0 +1,50 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "UEW90v7BPT_gV74M272tF"
+uri = "file://attached_assets/stock_images/crop_tomato.jpg"
+type = "image"
+title = "fresh red tomatoes harvested in basket on wooden table"
+
+[[outputs]]
+id = "4c_p1Nrz8cnQiqZ87ttX0"
+uri = "file://attached_assets/stock_images/crop_rice.jpg"
+type = "image"
+title = "rice paddy field grains close up"
+
+[[outputs]]
+id = "1NfCdOlnUHzTpd-xwUL__"
+uri = "file://attached_assets/stock_images/crop_wheat.jpg"
+type = "image"
+title = "golden wheat grain harvest in burlap sack"
+
+[[outputs]]
+id = "kVqnYouwYTwdyn04c9l9m"
+uri = "file://attached_assets/stock_images/crop_maize.jpg"
+type = "image"
+title = "yellow corn maize cobs harvested"
+
+[[outputs]]
+id = "BK8hdJXLhzCVFKMwtTcRY"
+uri = "file://attached_assets/stock_images/crop_potato.jpg"
+type = "image"
+title = "fresh potatoes in burlap sack"
+
+[[outputs]]
+id = "RmHm80XVFUxjkYrINgzw2"
+uri = "file://attached_assets/stock_images/crop_sugarcane.jpg"
+type = "image"
+title = "sugarcane stalks bundle harvest"
+
+[[outputs]]
+id = "b_ghOa_XnafeVVOrP9gmg"
+uri = "file://attached_assets/stock_images/crop_groundnut.jpg"
+type = "image"
+title = "groundnut peanuts in shell harvest"
+
+[[outputs]]
+id = "YvmzfexHojpGOTw8ASaeB"
+uri = "file://attached_assets/stock_images/crop_chili.jpg"
+type = "image"
+title = "red chili peppers pile fresh harvest"

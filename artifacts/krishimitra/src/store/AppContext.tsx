@@ -9,16 +9,21 @@ export type Profile = {
   cropType: string;
   soilType: string;
   irrigationType: string;
+  phone?: string;
 };
 
 export type Listing = {
   id: string;
-  crop: string;
+  crop: string; // option value (e.g. "tomato")
   quantity: number;
   pricePerKg: number;
   location: string;
-  qualityGrade: string;
+  qualityGrade: string; // "A" | "B" | "C"
   harvestDate: string;
+  sellerName: string;
+  sellerPhone: string;
+  rating: number; // 0–5
+  image?: string; // public path
 };
 
 export type Task = {
@@ -37,8 +42,8 @@ export type Activity = {
 };
 
 export type FieldMetrics = {
-  expectedYield: number; // quintals
-  currentYield: number; // quintals so far / projected
+  expectedYield: number;
+  currentYield: number;
   daysToHarvest: number;
   irrigationCount: number;
   fertilizerCount: number;
@@ -72,9 +77,10 @@ const DEFAULT_PROFILE: Profile = {
   village: "Hiriyur",
   state: "Karnataka",
   farmSize: 4.5,
-  cropType: "Tomato",
-  soilType: "Red Soil",
-  irrigationType: "Drip",
+  cropType: "tomato",
+  soilType: "red",
+  irrigationType: "drip",
+  phone: "+91 98765 43210",
 };
 
 const DEFAULT_METRICS: FieldMetrics = {
@@ -138,27 +144,89 @@ const DEFAULT_ACTIVITIES: Activity[] = [
 const DEFAULT_LISTINGS: Listing[] = [
   {
     id: "l1",
-    crop: "Tomato",
-    quantity: 200,
+    crop: "tomato",
+    quantity: 250,
     pricePerKg: 22,
     location: "Hiriyur, Karnataka",
     qualityGrade: "A",
     harvestDate: new Date().toISOString().slice(0, 10),
+    sellerName: "Ravi Kumar",
+    sellerPhone: "+91 98765 43210",
+    rating: 4.7,
+    image: "crops/crop_tomato.jpg",
   },
   {
     id: "l2",
-    crop: "Onion",
+    crop: "onion",
     quantity: 500,
     pricePerKg: 18,
     location: "Bellary, Karnataka",
     qualityGrade: "B",
     harvestDate: new Date(Date.now() - 86400000 * 2).toISOString().slice(0, 10),
+    sellerName: "Lakshmi Devi",
+    sellerPhone: "+91 99887 65432",
+    rating: 4.5,
+    image: "crops/crop_onion.jpg",
+  },
+  {
+    id: "l3",
+    crop: "rice",
+    quantity: 1200,
+    pricePerKg: 32,
+    location: "Mandya, Karnataka",
+    qualityGrade: "A",
+    harvestDate: new Date(Date.now() - 86400000 * 5).toISOString().slice(0, 10),
+    sellerName: "Mahesh Patil",
+    sellerPhone: "+91 90909 12345",
+    rating: 4.9,
+    image: "crops/crop_rice.jpg",
+  },
+  {
+    id: "l4",
+    crop: "wheat",
+    quantity: 800,
+    pricePerKg: 26,
+    location: "Hubli, Karnataka",
+    qualityGrade: "A",
+    harvestDate: new Date(Date.now() - 86400000 * 10).toISOString().slice(0, 10),
+    sellerName: "Suresh Reddy",
+    sellerPhone: "+91 98123 55678",
+    rating: 4.4,
+    image: "crops/crop_wheat.jpg",
+  },
+  {
+    id: "l5",
+    crop: "chili",
+    quantity: 150,
+    pricePerKg: 95,
+    location: "Guntur, Andhra Pradesh",
+    qualityGrade: "A",
+    harvestDate: new Date(Date.now() - 86400000 * 1).toISOString().slice(0, 10),
+    sellerName: "Anil Reddy",
+    sellerPhone: "+91 88996 77123",
+    rating: 4.8,
+    image: "crops/crop_chili.jpg",
+  },
+  {
+    id: "l6",
+    crop: "potato",
+    quantity: 600,
+    pricePerKg: 14,
+    location: "Hassan, Karnataka",
+    qualityGrade: "B",
+    harvestDate: new Date(Date.now() - 86400000 * 3).toISOString().slice(0, 10),
+    sellerName: "Geetha Bai",
+    sellerPhone: "+91 96543 21987",
+    rating: 4.3,
+    image: "crops/crop_potato.jpg",
   },
 ];
 
+const STORAGE_VERSION = "v2";
+
 function read<T>(key: string, fallback: T): T {
   try {
-    const v = localStorage.getItem(key);
+    const v = localStorage.getItem(`${STORAGE_VERSION}_${key}`);
     if (!v) return fallback;
     return JSON.parse(v) as T;
   } catch {
@@ -168,7 +236,7 @@ function read<T>(key: string, fallback: T): T {
 
 function persist<T>(key: string, value: T) {
   try {
-    localStorage.setItem(key, JSON.stringify(value));
+    localStorage.setItem(`${STORAGE_VERSION}_${key}`, JSON.stringify(value));
   } catch {
     /* ignore */
   }
@@ -201,7 +269,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setProfile: (p) => setProfileState(p),
       listings,
       addListing: (l) =>
-        setListings((prev) => [...prev, { ...l, id: `l${Date.now()}` }]),
+        setListings((prev) => [{ ...l, id: `l${Date.now()}` }, ...prev]),
       removeListing: (id) => setListings((prev) => prev.filter((x) => x.id !== id)),
       tasks,
       toggleTask: (id) =>

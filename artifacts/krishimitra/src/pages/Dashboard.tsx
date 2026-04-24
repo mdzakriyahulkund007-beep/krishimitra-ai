@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useApp } from "@/store/AppContext";
 import { t } from "@/i18n/translations";
+import { CROP_OPTIONS, SOIL_OPTIONS, IRRIGATION_OPTIONS, findOption } from "@/i18n/options";
 import { MonitoringBar } from "@/components/MonitoringBar";
 import { VoiceButton } from "@/components/VoiceButton";
 
@@ -75,17 +76,23 @@ export default function Dashboard() {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-muted-foreground">{t("crop", lang)}</span>
-                <span className="font-medium">{profile.cropType}</span>
+                <span className="font-medium">
+                  {findOption(CROP_OPTIONS, profile.cropType)?.labels[lang] ?? profile.cropType}
+                </span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-muted-foreground">{t("soilType", lang)}</span>
-                <span className="font-medium">{profile.soilType}</span>
+                <span className="font-medium">
+                  {findOption(SOIL_OPTIONS, profile.soilType)?.labels[lang] ?? profile.soilType}
+                </span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-muted-foreground">
                   {t("irrigationType", lang)}
                 </span>
-                <span className="font-medium">{profile.irrigationType}</span>
+                <span className="font-medium">
+                  {findOption(IRRIGATION_OPTIONS, profile.irrigationType)?.labels[lang] ?? profile.irrigationType}
+                </span>
               </div>
             </div>
           </CardContent>
