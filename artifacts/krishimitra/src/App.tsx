@@ -12,6 +12,7 @@ import Tasks from "@/pages/Tasks";
 import Alerts from "@/pages/Alerts";
 import SoilPest from "@/pages/SoilPest";
 import MultiAgent from "@/pages/MultiAgent";
+import MandiPrices from "@/pages/MandiPrices";
 import Profile from "@/pages/Profile";
 import { Layout } from "@/components/Layout";
 import { AppProvider } from "@/store/AppContext";
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/alerts" component={Alerts} />
         <Route path="/soil-pest" component={SoilPest} />
         <Route path="/agents" component={MultiAgent} />
+        <Route path="/mandi" component={MandiPrices} />
         <Route path="/profile" component={Profile} />
         <Route component={NotFound} />
       </Switch>

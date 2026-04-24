@@ -34,7 +34,23 @@ export const T: Record<string, Dict> = {
   alerts: { en: "Alerts", hi: "चेतावनियाँ", kn: "ಎಚ್ಚರಿಕೆಗಳು", te: "హెచ్చరికలు", ur: "انتباہات" },
   soilPest: { en: "Soil & Pest", hi: "मिट्टी और कीट", kn: "ಮಣ್ಣು ಮತ್ತು ಕೀಟ", te: "నేల & తెగుళ్లు", ur: "مٹی اور کیڑے" },
   multiAgent: { en: "AI Agents", hi: "एआई एजेंट", kn: "ಎಐ ಏಜೆಂಟ್‌ಗಳು", te: "ఏఐ ఏజెంట్లు", ur: "اے آئی ایجنٹس" },
+  mandiPrices: { en: "Mandi Prices", hi: "मंडी भाव", kn: "ಮಂಡಿ ಬೆಲೆಗಳು", te: "మండీ ధరలు", ur: "منڈی کے بھاؤ" },
   profile: { en: "Profile", hi: "प्रोफ़ाइल", kn: "ಪ್ರೊಫೈಲ್", te: "ప్రొఫైల్", ur: "پروفائل" },
+
+  // Mandi
+  todayPrice: { en: "Today's Price", hi: "आज का भाव", kn: "ಇಂದಿನ ಬೆಲೆ", te: "నేటి ధర", ur: "آج کا بھاؤ" },
+  weekTrend: { en: "7-Day Trend", hi: "7-दिवसीय रुझान", kn: "7-ದಿನಗಳ ಪ್ರವೃತ್ತಿ", te: "7-రోజుల ధోరణి", ur: "7 دن کا رجحان" },
+  bestMandi: { en: "Best Selling Mandi", hi: "सर्वश्रेष्ठ बिक्री मंडी", kn: "ಅತ್ಯುತ್ತಮ ಮಾರಾಟ ಮಂಡಿ", te: "ఉత్తమ అమ్మకపు మండీ", ur: "بہترین فروخت منڈی" },
+  nearbyMandis: { en: "Nearby Mandis", hi: "नज़दीकी मंडियाँ", kn: "ಹತ್ತಿರದ ಮಂಡಿಗಳು", te: "సమీప మండీలు", ur: "قریبی منڈیاں" },
+  priceChange: { en: "Change", hi: "बदलाव", kn: "ಬದಲಾವಣೆ", te: "మార్పు", ur: "تبدیلی" },
+  distance: { en: "Distance", hi: "दूरी", kn: "ದೂರ", te: "దూరం", ur: "فاصلہ" },
+  km: { en: "km", hi: "किमी", kn: "ಕಿ.ಮೀ", te: "కి.మీ", ur: "کلومیٹر" },
+  recommendation: { en: "Recommendation", hi: "सिफ़ारिश", kn: "ಶಿಫಾರಸು", te: "సిఫార్సు", ur: "سفارش" },
+  pricePerQuintal: { en: "Price per quintal (₹)", hi: "मूल्य प्रति क्विंटल (₹)", kn: "ಕ್ವಿಂಟಾಲ್ ಬೆಲೆ (₹)", te: "క్వింటాల్ ధర (₹)", ur: "فی کوئنٹل قیمت (₹)" },
+  selectCropForPrices: { en: "Select a crop to see live mandi prices", hi: "लाइव मंडी भाव देखने के लिए फसल चुनें", kn: "ಲೈವ್ ಮಂಡಿ ಬೆಲೆಗಳಿಗೆ ಬೆಳೆ ಆಯ್ಕೆಮಾಡಿ", te: "లైవ్ మండీ ధరలకు పంటను ఎంచుకోండి", ur: "لائیو منڈی بھاؤ دیکھنے کے لیے فصل منتخب کریں" },
+  sellNow: { en: "Best to sell now — prices peaking", hi: "अभी बेचना सर्वश्रेष्ठ — मूल्य चरम पर", kn: "ಈಗ ಮಾರಾಟ ಮಾಡಿ — ಬೆಲೆ ಗರಿಷ್ಠ", te: "ఇప్పుడు అమ్మండి — ధరలు గరిష్ఠం", ur: "ابھی فروخت کریں — قیمتیں عروج پر" },
+  holdSell: { en: "Hold — prices may rise next week", hi: "रोकें — अगले सप्ताह मूल्य बढ़ सकता है", kn: "ತಾಳ್ಮೆಯಿರಿ — ಮುಂದಿನ ವಾರ ಬೆಲೆ ಏರಬಹುದು", te: "వేచి ఉండండి — వచ్చే వారం ధరలు పెరగవచ్చు", ur: "روکیں — اگلے ہفتے قیمتیں بڑھ سکتی ہیں" },
+  steadyPrices: { en: "Stable market — sell as planned", hi: "स्थिर बाज़ार — योजनानुसार बेचें", kn: "ಸ್ಥಿರ ಮಾರುಕಟ್ಟೆ — ಯೋಜನೆಯಂತೆ ಮಾರಾಟ", te: "స్థిర మార్కెట్ — ప్రణాళిక ప్రకారం అమ్మండి", ur: "مستحکم مارکیٹ — منصوبے کے مطابق فروخت کریں" },
 
   // Common
   language: { en: "Language", hi: "भाषा", kn: "ಭಾಷೆ", te: "భాష", ur: "زبان" },

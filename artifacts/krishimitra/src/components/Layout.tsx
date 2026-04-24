@@ -11,6 +11,7 @@ import {
   Network,
   User,
   Leaf,
+  BarChart3,
 } from "lucide-react";
 import { useApp } from "@/store/AppContext";
 import { t } from "@/i18n/translations";
@@ -22,6 +23,7 @@ const NAV = [
   { path: "/advisory", key: "advisory", icon: Brain },
   { path: "/weather", key: "weather", icon: CloudSun },
   { path: "/marketplace", key: "marketplace", icon: ShoppingCart },
+  { path: "/mandi", key: "mandiPrices", icon: BarChart3 },
   { path: "/tasks", key: "tasks", icon: ListChecks },
   { path: "/alerts", key: "alerts", icon: Bell },
   { path: "/soil-pest", key: "soilPest", icon: Sprout },
