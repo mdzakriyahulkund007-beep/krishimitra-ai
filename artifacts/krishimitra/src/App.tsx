@@ -13,6 +13,7 @@ import Alerts from "@/pages/Alerts";
 import SoilPest from "@/pages/SoilPest";
 import MultiAgent from "@/pages/MultiAgent";
 import MandiPrices from "@/pages/MandiPrices";
+import CropCalendar from "@/pages/CropCalendar";
 import Profile from "@/pages/Profile";
 import { Layout } from "@/components/Layout";
 import { AppProvider } from "@/store/AppContext";
@@ -33,6 +34,7 @@ function Router() {
         <Route path="/soil-pest" component={SoilPest} />
         <Route path="/agents" component={MultiAgent} />
         <Route path="/mandi" component={MandiPrices} />
+        <Route path="/calendar" component={CropCalendar} />
         <Route path="/profile" component={Profile} />
         <Route component={NotFound} />
       </Switch>

@@ -16,6 +16,7 @@ A full-stack React + Vite multilingual AI farming advisory and marketplace web a
 - **Soil & Pest** info with suitable crops, common pests, fertilizer suggestions.
 - **Multi-Agent Pipeline** UI showing Data Ingestion → Risk Detection → Decision → Orchestrator agents.
 - **Mandi Price Trends** — pick a crop to see today's price across 4 nearby mandis, a 7-day multi-line trend chart (recharts), the best-selling mandi highlighted with distance, and an AI buy/hold/sell recommendation. All mandi names localized to all 5 languages.
+- **Crop Calendar** — month-by-month farming activities for each of the 10 crops (sowing, transplanting, irrigation, fertilizer, pest control, weeding, harvesting, soil prep). Shows season (Kharif/Rabi/Zaid/Year-Round), highlights the current month with a focused card, and renders a full 12-month timeline with color-coded activity chips. All notes localized in 5 languages with voice readout for the current month.
 - **Field Monitoring Bar** tracking yield progress (current/expected quintals + %), days to harvest, irrigation/fertilizer/pest-control counts.
 - **Downloadable PDF Report** (jsPDF) with farmer profile, crop analytics (yield bar), activities summary, tasks status — generated from current state.
 - **Profile** page to update farmer info and preferred language; persisted in localStorage.

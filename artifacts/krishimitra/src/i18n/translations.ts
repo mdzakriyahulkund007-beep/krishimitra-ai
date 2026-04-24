@@ -35,7 +35,23 @@ export const T: Record<string, Dict> = {
   soilPest: { en: "Soil & Pest", hi: "मिट्टी और कीट", kn: "ಮಣ್ಣು ಮತ್ತು ಕೀಟ", te: "నేల & తెగుళ్లు", ur: "مٹی اور کیڑے" },
   multiAgent: { en: "AI Agents", hi: "एआई एजेंट", kn: "ಎಐ ಏಜೆಂಟ್‌ಗಳು", te: "ఏఐ ఏజెంట్లు", ur: "اے آئی ایجنٹس" },
   mandiPrices: { en: "Mandi Prices", hi: "मंडी भाव", kn: "ಮಂಡಿ ಬೆಲೆಗಳು", te: "మండీ ధరలు", ur: "منڈی کے بھاؤ" },
+  cropCalendar: { en: "Crop Calendar", hi: "फसल कैलेंडर", kn: "ಬೆಳೆ ಕ್ಯಾಲೆಂಡರ್", te: "పంట క్యాలెండర్", ur: "فصل کیلنڈر" },
   profile: { en: "Profile", hi: "प्रोफ़ाइल", kn: "ಪ್ರೊಫೈಲ್", te: "ప్రొఫైల్", ur: "پروفائل" },
+
+  // Calendar activities
+  sowing: { en: "Sowing", hi: "बुवाई", kn: "ಬಿತ್ತನೆ", te: "విత్తనం", ur: "بوائی" },
+  transplanting: { en: "Transplanting", hi: "रोपाई", kn: "ಸಸಿ ನಾಟಿ", te: "నాటడం", ur: "پنیری لگانا" },
+  weeding: { en: "Weeding", hi: "निराई", kn: "ಕಳೆ ತೆಗೆಯುವಿಕೆ", te: "కలుపు తీత", ur: "گوڈی" },
+  harvesting: { en: "Harvesting", hi: "कटाई", kn: "ಕೊಯ್ಲು", te: "పంట కోత", ur: "کٹائی" },
+  soilPrep: { en: "Soil Preparation", hi: "मिट्टी की तैयारी", kn: "ಮಣ್ಣಿನ ಸಿದ್ಧತೆ", te: "నేల తయారీ", ur: "مٹی کی تیاری" },
+  thisMonth: { en: "This Month", hi: "इस माह", kn: "ಈ ತಿಂಗಳು", te: "ఈ నెల", ur: "اس ماہ" },
+  monthlyActivities: { en: "Monthly Activities", hi: "मासिक गतिविधियाँ", kn: "ಮಾಸಿಕ ಚಟುವಟಿಕೆಗಳು", te: "నెలవారీ కార్యకలాపాలు", ur: "ماہانہ سرگرمیاں" },
+  noActivity: { en: "Off-season — no critical activity", hi: "ऑफ-सीज़न — कोई महत्वपूर्ण गतिविधि नहीं", kn: "ಆಫ್-ಸೀಸನ್ — ಯಾವುದೇ ನಿರ್ಣಾಯಕ ಚಟುವಟಿಕೆ ಇಲ್ಲ", te: "ఆఫ్-సీజన్ — ముఖ్యమైన కార్యకలాపం లేదు", ur: "آف سیزن — کوئی اہم سرگرمی نہیں" },
+  season: { en: "Season", hi: "मौसम", kn: "ಋತು", te: "సీజన్", ur: "موسم" },
+  kharif: { en: "Kharif (Jun–Oct)", hi: "खरीफ (जून-अक्टू)", kn: "ಖರೀಫ್ (ಜೂನ್-ಅಕ್ಟೋ)", te: "ఖరీఫ్ (జూన్-అక్టో)", ur: "خریف (جون-اکتوبر)" },
+  rabi: { en: "Rabi (Nov–Apr)", hi: "रबी (नव-अप्रैल)", kn: "ರಬಿ (ನವೆಂ-ಏಪ್ರಿ)", te: "రబీ (నవం-ఏప్రి)", ur: "ربیع (نومبر-اپریل)" },
+  zaid: { en: "Zaid (Mar–Jun)", hi: "ज़ायद (मार्च-जून)", kn: "ಜೈದ್ (ಮಾರ್ಚ್-ಜೂನ್)", te: "జైద్ (మార్చి-జూన్)", ur: "زائد (مارچ-جون)" },
+  yearRound: { en: "Year-Round", hi: "साल भर", kn: "ವರ್ಷಪೂರ್ತಿ", te: "సంవత్సరం పొడవునా", ur: "سال بھر" },
 
   // Mandi
   todayPrice: { en: "Today's Price", hi: "आज का भाव", kn: "ಇಂದಿನ ಬೆಲೆ", te: "నేటి ధర", ur: "آج کا بھاؤ" },
