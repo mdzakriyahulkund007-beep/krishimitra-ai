@@ -1,0 +1,261 @@
+Build a full-stack, production-quality AI-powered agriculture advisory and marketplace web application.
+
+App Name: "KrishiMitra AI"
+
+Architecture:
+- Frontend: React (Vite) + Tailwind CSS
+- State Management: React Hooks (useState, useEffect, Context API if needed)
+- API Integration: Fetch/Axios
+- Backend Integration: REST API (n8n webhook ready)
+- Code Structure: Modular, reusable components
+
+Goal:
+Develop an intelligent, farmer-friendly platform that combines:
+1. AI-powered farm advisory system
+2. Direct farmer-to-buyer marketplace (no middlemen)
+3. Multilingual support
+4. Voice-based guidance system
+
+-----------------------------------
+
+🌐 MULTI-LANGUAGE SYSTEM (CORE FEATURE)
+
+Implement dynamic internationalization (i18n):
+
+Languages:
+- English (en)
+- Hindi (hi)
+- Kannada (kn)
+- Telugu (te)
+- Urdu (ur)
+
+Requirements:
+- Language selector dropdown (top-right)
+- Store selected language in global state
+- Use translation JSON object (key-value pairs)
+- All UI text must dynamically switch language
+- Default language: Hindi or Kannada
+
+Example:
+{
+  "analyze": {
+    "en": "Analyze Farm",
+    "hi": "फसल जांचें",
+    "kn": "ಬೆಳೆ ಪರಿಶೀಲಿಸಿ"
+  }
+}
+
+-----------------------------------
+
+🎤 VOICE ASSISTANT SYSTEM
+
+Implement Text-to-Speech using Web Speech API:
+
+Features:
+- Button: "🔊 Listen"
+- Button: "⏹ Stop"
+
+Functionality:
+- Convert AI output → speech
+- Dynamically change voice based on selected language
+
+Language Codes:
+- Hindi → hi-IN
+- Kannada → kn-IN
+- Telugu → te-IN
+- Urdu → ur-PK
+- English → en-US
+
+Implementation:
+- Use SpeechSynthesisUtterance
+- Handle play/stop controls
+- Read:
+  - Farm health
+  - Risk analysis
+  - Recommendations
+  - Alerts
+
+-----------------------------------
+
+🧑‍🌾 FARMER PROFILE MODULE
+
+Fields:
+- Name
+- Location (Village, State)
+- Farm Size (Acres)
+- Crop Type
+- Soil Type
+- Irrigation Type
+- Preferred Language
+
+UI:
+- Sidebar or top profile card
+- Editable form
+
+-----------------------------------
+
+📱 CORE APPLICATION SCREENS
+
+1. 🏠 Dashboard
+- Farm Health Status (color-coded)
+- Weather summary
+- Soil status
+- Crop stage
+- AI quick insights
+
+2. 🤖 AI Advisory Screen
+Input Form:
+- Crop
+- Soil moisture
+- Temperature
+- Humidity
+
+Action:
+- Button → handleAnalyze()
+
+Output:
+- Health
+- Pest Risk
+- Water Stress
+- Nutrient Deficiency
+- Recommendations
+
+3. 🌦 Weather Intelligence
+- 5-day forecast (mock data allowed)
+- Rain probability
+- Temperature trends
+- AI suggestions:
+  - Rain → avoid irrigation
+  - High humidity → pest alert
+
+4. 🛒 Marketplace (OLX-style)
+
+Farmer Side:
+- Create listing:
+  - Crop
+  - Quantity (kg)
+  - Price/kg
+  - Location
+  - Quality grade
+  - Harvest date
+
+Buyer Side:
+- Browse listings
+- Filter (price, crop, location)
+- Contact button
+
+5. 📋 Task Management
+- AI-generated tasks
+- Mark as completed
+
+6. 🔔 Alerts System
+- Pest alerts
+- Weather alerts
+- Water stress alerts
+
+7. 🌱 Soil & Pest Info
+- Suitable crops for soil
+- Common pests
+- Fertilizer suggestions
+
+-----------------------------------
+
+🧠 MULTI-AGENT SYSTEM (UI REPRESENTATION)
+
+Display logical architecture:
+
+- Data Ingestion Agent
+- Risk Detection Agent
+- Decision Agent
+- Action Orchestrator
+
+Show as:
+- Step flow or cards
+- Visual pipeline
+
+-----------------------------------
+
+🔗 API INTEGRATION
+
+Create function:
+
+async function handleAnalyze() {
+  const response = await fetch("YOUR_N8N_WEBHOOK_URL", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      crop,
+      soil,
+      temperature,
+      humidity
+    })
+  });
+
+  const data = await response.json();
+  setResult(data);
+}
+
+-----------------------------------
+
+🌾 FARMER-FRIENDLY UI (CRITICAL)
+
+- Large buttons
+- Simple language
+- Minimal steps
+- Icons + emojis
+- Card-based UI
+- Color indicators:
+  - Green = Safe
+  - Yellow = Warning
+  - Red = Critical
+- Mobile-first responsive design
+
+-----------------------------------
+
+🎨 DESIGN SYSTEM
+
+- Tailwind CSS
+- Soft shadows
+- Rounded cards (2xl)
+- Green theme
+- Consistent spacing
+- Clean typography
+
+-----------------------------------
+
+⚡ PERFORMANCE + UX
+
+- Loading spinner during API call
+- Error handling (fallback UI)
+- Dummy data fallback
+- Fast UI rendering
+
+-----------------------------------
+
+📁 CODE STRUCTURE
+
+- /components
+- /pages
+- /utils (translations, helpers)
+- /services (API calls)
+
+-----------------------------------
+
+OUTPUT REQUIREMENTS:
+
+- Fully working React application
+- All components separated and reusable
+- Clean and readable code
+- Ready for deployment
+- API integration-ready
+
+DO NOT:
+- Overcomplicate backend
+- Add unnecessary libraries
+
+FOCUS:
+- UI clarity
+- Real-world usability
+- Clean architecture using this prompt updade me a voice for all the collums and update the ai adviso...

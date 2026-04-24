@@ -1,27 +1,40 @@
-# Workspace
+# KrishiMitra AI
 
-## Overview
+A full-stack React + Vite multilingual AI farming advisory and marketplace web app for Indian farmers.
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+## Artifact
+- `artifacts/krishimitra` — main web app (React + Vite + Tailwind v4 + shadcn/ui + wouter)
 
-## Stack
+## Features
+- **Multilingual UI** in 5 languages — English, Hindi, Kannada, Telugu, Urdu — every label, option, heading, recommendation, alert, and forecast switches dynamically with the language selector.
+- **Voice assistant** using Web Speech API speaks the selected language (en-US, hi-IN, kn-IN, te-IN, ur-PK). "Listen" buttons appear on Dashboard, Advisory, Weather, Alerts, Soil & Pest, and the Monitoring Bar.
+- **AI Farm Advisory** — analyzes crop, soil moisture, temperature, humidity → returns health, pest risk, water stress, nutrient deficiency + localized recommendations.
+- **5-Day Weather Forecast** with localized day labels and AI-generated suggestions in selected language.
+- **OLX-style Marketplace** with Buyer/Seller tabs, create/browse/delete listings, search filter.
+- **AI Tasks** with mark-complete toggle.
+- **Alerts** for pest, weather, water — fully translated messages.
+- **Soil & Pest** info with suitable crops, common pests, fertilizer suggestions.
+- **Multi-Agent Pipeline** UI showing Data Ingestion → Risk Detection → Decision → Orchestrator agents.
+- **Field Monitoring Bar** tracking yield progress (current/expected quintals + %), days to harvest, irrigation/fertilizer/pest-control counts.
+- **Downloadable PDF Report** (jsPDF) with farmer profile, crop analytics (yield bar), activities summary, tasks status — generated from current state.
+- **Profile** page to update farmer info and preferred language; persisted in localStorage.
+- **RTL support** for Urdu (`dir="rtl"` toggled per-language).
 
-- **Monorepo tool**: pnpm workspaces
-- **Node.js version**: 24
-- **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
-- **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
-- **Build**: esbuild (CJS bundle)
+## Architecture
+- `src/i18n/translations.ts` — `LANGUAGES` constant + `T` dictionary + `t(key, lang)` helper.
+- `src/i18n/recommendations.ts` — localized AI recommendation strings keyed by condition.
+- `src/store/AppContext.tsx` — global state with `lang`, `profile`, `listings`, `tasks`, `activities`, `metrics` (FieldMetrics) — all persisted to localStorage.
+- `src/utils/voice.ts` — speech synthesis wrapper with language-voice mapping.
+- `src/utils/report.ts` — `downloadReport()` builds a multi-page PDF using jsPDF.
+- `src/components/Layout.tsx` — sidebar + topbar + mobile bottom nav, RTL-aware.
+- `src/components/MonitoringBar.tsx` — yield progress + 5 stat tiles + Listen + Download buttons.
+- `src/components/VoiceButton.tsx` + `LanguageSelector.tsx` — reusable controls.
+- `src/pages/*` — Dashboard, Advisory, Weather, Marketplace, Tasks, Alerts, SoilPest, MultiAgent, Profile.
 
-## Key Commands
+## Routes (`previewPath` = `/`)
+- `/` Dashboard, `/advisory`, `/weather`, `/marketplace`, `/tasks`, `/alerts`, `/soil-pest`, `/agents`, `/profile`.
 
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- `pnpm --filter @workspace/api-server run dev` — run API server locally
-
-See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+## Notes
+- jsPDF default Helvetica supports only Latin-1; report includes English labels alongside the localized title and uses `safeText()` to strip Indic/RTL chars in the PDF body so the file remains legible across languages.
+- All data is stored client-side (localStorage) — no backend required.
+- Theme is a custom green agriculture palette set in `src/index.css` (light + dark).

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "KrishiMitra AI"
+version = "1.0.0"
+id = "artifacts/krishimitra"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22534
+
+[services.development]
+run = "pnpm --filter @workspace/krishimitra run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/krishimitra", "run", "build" ]
+publicDir = "artifacts/krishimitra/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22534"
+BASE_PATH = "/"
