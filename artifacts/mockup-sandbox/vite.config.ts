@@ -5,10 +5,10 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { mockupPreviewPlugin } from "./mockupPreviewPlugin";
 
-// ✅ FIX: fallback de diya (error throw hata diya)
-const port = Number(process.env.PORT) || 5173;
+// ✅ SAFE PORT FIX (no crash in Vercel)
+const port = process.env.PORT ? Number(process.env.PORT) : 5173;
 
-// ✅ FIX: basePath fallback
+// ✅ BASE PATH FIX
 const basePath = process.env.BASE_PATH || "/";
 
 export default defineConfig({
